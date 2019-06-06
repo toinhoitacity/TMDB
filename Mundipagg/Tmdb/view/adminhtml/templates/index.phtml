@@ -1,0 +1,48 @@
+<h1>TMDB</h1>
+
+<?php $movies = $block->getMovie();?>
+<?php $search = $block->getPersonalSearch();?>
+<?php $movie = $block->singleMovie(); ?>
+<?="-->" . var_dump($movie) . "<--"?>
+<?= ($block->isSingleMovie())? "Clicou no filme": "Não cliclou"?>
+<?php $isSingleMovie = $block->isSingleMovie(); ?>
+
+<?php if($isSingleMovie): ?>
+
+    <p><?=$movie->title;?></p>
+    <p><?=$movie->poster_path;?></p>
+    <p><?=$movie->overview;?></p>
+    <p><?=$movie->id;?></p>
+
+    <h2 style="height: 55px"><?=$movie->title?></h2>
+    <p><img src="<?=$block->getImageBaseUrl($movie->poster_path)?>"></p>
+    <p><?=$movie->overview?></p>
+    <form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/index/index");?>">
+        <input name="tmdb_product" type="hidden" value="<?=$movie->id?>"/>
+        <button type="submit">Add Movie as Product</button>
+    </form>
+<?php endif;?>
+
+
+<form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/index/index");?>">
+    <input name="search_tmdb" type="text" value="<?= (!empty($search))? $search : "";?>"/>
+    <button type="submit">Search Movie.</button>
+</form>
+
+<?php if (!empty($movies->results)) :?>
+    <?php foreach ($movies->results as $item): ?>
+        <div style="border: 1px solid black; width: 300px; float: left">
+            <h2 style="height: 55px"><?=$item->title?></h2>
+            <p><img src="<?=$block->getImageBaseUrl($item->poster_path)?>"></p>
+            <a href="<?= $block->getMakeUrl("mundipagg_tmdb/index/index", ['tmdb_id' => $item->id])?>">
+                <span>Add to stock</span>
+            </a>
+            <form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/index/index");?>">
+                <input name="tmdb_id" type="hidden" value="<?=$item->id?>"/>
+                <button type="submit">See Description</button>
+            </form>
+            <p><?=$item->id?></p>
+        </div>
+    <?php endforeach;?>
+<?php endif; ?>
+

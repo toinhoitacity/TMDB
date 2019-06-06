@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mundipagg\Tmdb\Api\TmdbRepositoryInterface" type="Mundipagg\Tmdb\Model\TmdbRepository"/>
+    <preference for="Mundipagg\Tmdb\Api\Data\TmdbInterface" type="Mundipagg\Tmdb\Model\Tmdb" />
+    <preference for="Mundipagg\Tmdb\Service\ImportImageInterface" type="Mundipagg\Tmdb\Service\ImportImage"/>
+    <preference for="Mundipagg\Tmdb\HTTPClient\Token\ApiTokenInterface" type="Mundipagg\Tmdb\HTTPClient\Token\ApiToken"/>
+    <preference for="Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface" type="Mundipagg\Tmdb\HTTPClient\Image\ImageUri"/>
+    <preference for="Mundipagg\Tmdb\WebService\TmdbWebServiceInterface" type="Mundipagg\Tmdb\WebService\TmdbWebService"/>
+</config>

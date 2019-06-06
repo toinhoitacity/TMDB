@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <tmdb>
+            <general>
+                <base_uri_api>https://api.themoviedb.org/3/</base_uri_api>
+                <api_key>6e60d556d8ca594a46e2b7e0639ca777</api_key>
+            </general>
+        </tmdb>
+    </default>
+</config>

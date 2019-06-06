@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Mundipagg_Tmdb::tmdb_root" sortOrder="10" disabled="false" title="Parent Item">
+                    <resource id="Mundipagg_Tmdb::tmdb_movies" sortOrder="20" disabled="false" title="Movies"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
