@@ -3,11 +3,11 @@
 /**
  * Web Service Interface
  *
- * @package Mundipagg\Tmdb\WebService
+ * @package Toinhoitacity\Tmdb\WebService
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\WebService;
+namespace Toinhoitacity\Tmdb\WebService;
 
 use Zend\Stdlib\Parameters;
 
@@ -26,7 +26,7 @@ interface TmdbWebServiceInterface
      * Add custom parameters to send with API request
      *
      * @param string $data
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function setMethodUrl($methodUrl): TmdbWebServiceInterface;
 
@@ -34,7 +34,7 @@ interface TmdbWebServiceInterface
      * Add custom parameters
      *
      * @param array $params
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function addParams(array $params = []): TmdbWebServiceInterface;
 
@@ -43,7 +43,7 @@ interface TmdbWebServiceInterface
      *
      * @param string $key
      * @param string $value
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function addParamsByKeyAndValue(string $key, string $value): TmdbWebServiceInterface;
 

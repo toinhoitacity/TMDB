@@ -1,9 +1,9 @@
 <?php
 
-namespace Mundipagg\Tmdb\Test\Unit\HTTPClient\Image;
+namespace Toinhoitacity\Tmdb\Test\Unit\HTTPClient\Image;
 
 use \PHPUnit\Framework\TestCase;
-use Mundipagg\Tmdb\HTTPClient\Image\ImageUri;
+use Toinhoitacity\Tmdb\HTTPClient\Image\ImageUri;
 
 /**
  * Class ImageUriTest

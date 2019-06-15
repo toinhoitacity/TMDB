@@ -3,13 +3,13 @@
 /**
  * Class Model for Tmdb class
  *
- * @package Mundipagg\Tmdb\Model\Tmdb
+ * @package Toinhoitacity\Tmdb\Model\Tmdb
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Model;
+namespace Toinhoitacity\Tmdb\Model;
 
-use Mundipagg\Tmdb\Api\Data\TmdbInterface;
+use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
 
 class Tmdb implements TmdbInterface
 {

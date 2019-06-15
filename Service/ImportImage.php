@@ -3,16 +3,16 @@
 /**
  * This class import image to a product
  *
- * @package Mundipagg\Tmdb\Service\ImportImageService
+ * @package Toinhoitacity\Tmdb\Service\ImportImageService
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Service;
+namespace Toinhoitacity\Tmdb\Service;
 
 use Magento\Catalog\Model\Product;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use \Magento\Framework\Filesystem\Io\File;
-use Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface;
+use Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface;
 
 class ImportImage implements ImportImageInterface
 {

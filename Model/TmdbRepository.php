@@ -3,18 +3,18 @@
 /**
  * This class a repository for TMDB
  *
- * @package Mundipagg\Tmdb\Model\TmdbRepository
+ * @package Toinhoitacity\Tmdb\Model\TmdbRepository
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Model;
+namespace Toinhoitacity\Tmdb\Model;
 
 use Magento\Catalog\Api\Data\ProductInterfaceFactory;
 use Magento\Catalog\Api\ProductRepositoryInterface;
-use Mundipagg\Tmdb\Api\Data\TmdbInterface;
-use Mundipagg\Tmdb\Api\TmdbRepositoryInterface;
-use Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface;
-use Mundipagg\Tmdb\Service\ImportImage;
+use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
+use Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface;
+use Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface;
+use Toinhoitacity\Tmdb\Service\ImportImage;
 use Magento\Framework\Exception\InputException;
 use Magento\Framework\Exception\StateException;
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -51,8 +51,8 @@ class TmdbRepository implements TmdbRepositoryInterface
      *
      * @param \Magento\Catalog\Api\Data\ProductInterfaceFactory $productFactory
      * @param \Magento\Catalog\Api\ProductRepositoryInterface $productRepository
-     * @param \Mundipagg\Tmdb\Service\ImportImage $importImage
-     * @param \Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface $imageUri
+     * @param \Toinhoitacity\Tmdb\Service\ImportImage $importImage
+     * @param \Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface $imageUri
      */
     public function __construct(
         ProductInterfaceFactory $productFactory,
@@ -70,7 +70,7 @@ class TmdbRepository implements TmdbRepositoryInterface
     /**
      * Save content.
      *
-     * @param \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
+     * @param \Toinhoitacity\Tmdb\Api\Data\TmdbInterface $tmdb
      * @return bool
      * @throws \Magento\Framework\Exception\InputException
      * @throws \Magento\Framework\Exception\StateException
@@ -79,7 +79,7 @@ class TmdbRepository implements TmdbRepositoryInterface
     {
         /** @var \Magento\Catalog\Api\Data\ProductInterface $product */
         $product = $this->productFactory->create();
-        $product->setSku('MundipaggTmdb' . $tmdb->getMovieId()); // Set your sku here
+        $product->setSku('ToinhoitacityTmdb' . $tmdb->getMovieId()); // Set your sku here
         $product->setName($tmdb->getTitle()); // Name of Product
         $product->setPrice(10.00); // price of product
 

@@ -3,11 +3,11 @@
 /**
  * Interface for import image
  *
- * @package Mundipagg\Tmdb\Service\ImportImageService
+ * @package Toinhoitacity\Tmdb\Service\ImportImageService
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Service;
+namespace Toinhoitacity\Tmdb\Service;
 
 use Magento\Catalog\Model\Product;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Mundipagg\Tmdb\Test\Unit\Helper;
+namespace Toinhoitacity\Tmdb\Test\Unit\Helper;
 
 use \PHPUnit\Framework\TestCase;
-use Mundipagg\Tmdb\Helper\Data;
+use Toinhoitacity\Tmdb\Helper\Data;
 //use \Magento\Framework\App\ObjectManager;
 use \Magento\TestFramework\ObjectManager;
 
@@ -22,7 +22,7 @@ class DataTest extends TestCase
     {
 //        $dataHelper = new Data();
 //        $objectManager = ObjectManager::getInstance();
-//        $dataHelper = $objectManager->get('Mundipagg\Tmdb\Helper\Data');
+//        $dataHelper = $objectManager->get('Toinhoitacity\Tmdb\Helper\Data');
         $objectManager = new ObjectManager($this);
 
         $dataHelper = $objectManager->getObject(Data::class);
@@ -38,7 +38,7 @@ class DataTest extends TestCase
     {
 //        $dataHelper = new Data();
         $objectManager = ObjectManager::getInstance();
-        $dataHelper = $objectManager->get('Mundipagg\Tmdb\Helper\Data');
+        $dataHelper = $objectManager->get('Toinhoitacity\Tmdb\Helper\Data');
         $this->assertEquals(self::BASE_URI_API, $dataHelper->getGeneralConfig("base_uri_api"));
         $this->assertEquals(self::API_KEY, $dataHelper->getGeneralConfig("api_key"));
     }

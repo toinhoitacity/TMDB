@@ -3,7 +3,7 @@
 <?php $movies = $block->getMovie();?>
 <?php $search = $block->getPersonalSearch();?>
 
-<form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/movie/index");?>">
+<form method="get" action="<?= $block->getMakeUrl("toinhoitacity_tmdb/movie/index");?>">
     <input name="search_tmdb" type="text" value="<?= (!empty($search))? $search : "";?>"/>
     <button type="submit">Search Movie.</button>
 </form>
@@ -15,7 +15,7 @@
             <h3 style="height: 47px"><?=$movie->getTitle()?></h3>
             <p><img src="<?=$block->getImageBaseUrl($movie->getImageUrl())?>"></p>
             
-            <form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/movie/show");?>">
+            <form method="get" action="<?= $block->getMakeUrl("toinhoitacity_tmdb/movie/show");?>">
                 <input name="tmdb_id" type="hidden" value="<?=$movie->getMovieId()?>"/>
                 <button type="submit">See Description</button>
             </form>

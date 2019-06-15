@@ -1,9 +1,9 @@
 <?php
 
-namespace Mundipagg\Tmdb\Test\Unit\HTTPClient\Token;
+namespace Toinhoitacity\Tmdb\Test\Unit\HTTPClient\Token;
 
 use \PHPUnit\Framework\TestCase;
-use Mundipagg\Tmdb\HTTPClient\Token\ApiToken;
+use Toinhoitacity\Tmdb\HTTPClient\Token\ApiToken;
 
 /**
  * Class ApiTokenTest

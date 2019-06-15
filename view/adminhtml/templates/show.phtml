@@ -8,7 +8,7 @@
     <h3><?=$movie->getTitle()?></h3>
     <p><img src="<?=$block->getImageBaseUrl($movie->getImageUrl())?>"></p>
     <p><?=$movie->getDescription()?></p>
-    <form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/movie/save");?>">
+    <form method="get" action="<?= $block->getMakeUrl("toinhoitacity_tmdb/movie/save");?>">
         <input name="tmdb_product" type="hidden" value="<?=$movie->getMovieId()?>"/>
         <button type="submit">Add Movie as Product</button>
     </form>

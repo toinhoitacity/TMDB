@@ -1,9 +1,9 @@
 <?php
 
-namespace Mundipagg\Tmdb\Test\Unit\WebService;
+namespace Toinhoitacity\Tmdb\Test\Unit\WebService;
 
-use Mundipagg\TMDB\Helper\Data;
-use Mundipagg\Tmdb\WebService\TmdbWebService;
+use Toinhoitacity\TMDB\Helper\Data;
+use Toinhoitacity\Tmdb\WebService\TmdbWebService;
 use \PHPUnit\Framework\TestCase;
 
 /**
@@ -22,7 +22,7 @@ class TmdbWebServiceTest extends TestCase
     protected $zendClientMock;
 
     /**
-     * @var \Mundipagg\Tmdb\Helper\Data|\PHPUnit_Framework_MockObject_MockObject
+     * @var \Toinhoitacity\Tmdb\Helper\Data|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $dataHelperMock;
 

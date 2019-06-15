@@ -3,19 +3,19 @@
 /**
  * Web Service Class
  *
- * @package Mundipagg\Tmdb\WebService
+ * @package Toinhoitacity\Tmdb\WebService
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\WebService;
+namespace Toinhoitacity\Tmdb\WebService;
 
 use Zend\Http\Headers;
 use \Zend\Http\Request;
 use \Magento\Framework\HTTP\ZendClient;
 use \Zend\Http\Client;
-use Mundipagg\Tmdb\Helper\Data;
-use Mundipagg\Tmdb\HTTPClient\Token\ApiTokenInterface;
-use Mundipagg\Tmdb\Model\Tmdb;
+use Toinhoitacity\Tmdb\Helper\Data;
+use Toinhoitacity\Tmdb\HTTPClient\Token\ApiTokenInterface;
+use Toinhoitacity\Tmdb\Model\Tmdb;
 use Zend\Stdlib\Parameters;
 
 class TmdbWebService implements TmdbWebServiceInterface
@@ -47,8 +47,8 @@ class TmdbWebService implements TmdbWebServiceInterface
      *
      * @param \Zend\Http\Request $request
      * @param Zend\Http\Client $client
-     * @param Mundipagg\Tmdb\Model\Tmdb $tmdb
-     * @param Mundipagg\Tmdb\Helper\Data $helperData
+     * @param Toinhoitacity\Tmdb\Model\Tmdb $tmdb
+     * @param Toinhoitacity\Tmdb\Helper\Data $helperData
      */
     public function __construct(Request $request, Client $client, Tmdb $tmdb, ApiTokenInterface $apiToken)
     {
@@ -74,7 +74,7 @@ class TmdbWebService implements TmdbWebServiceInterface
      * Add custom parameters to send with API request
      *
      * @param string $methodUrl
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function setMethodUrl($methodUrl): TmdbWebServiceInterface
     {
@@ -86,7 +86,7 @@ class TmdbWebService implements TmdbWebServiceInterface
      * Add custom parameters
      *
      * @param array $params
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function addParams(array $params = []): TmdbWebServiceInterface
     {
@@ -99,7 +99,7 @@ class TmdbWebService implements TmdbWebServiceInterface
      *
      * @param string $key
      * @param string $value
-     * @return \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $this
+     * @return \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $this
      */
     public function addParamsByKeyAndValue(string $key, string $value): TmdbWebServiceInterface
     {
