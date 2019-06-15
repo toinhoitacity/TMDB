@@ -3,15 +3,15 @@
 /**
  * Index Block Class
  *
- * @package Mundipagg\Tmdb\Block\Adminhtml
+ * @package Toinhoitacity\Tmdb\Block\Adminhtml
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Block\Adminhtml;
+namespace Toinhoitacity\Tmdb\Block\Adminhtml;
 
 use Magento\Framework\View\Element\Template;
 use \Magento\Backend\Block\Template\Context;
-use Mundipagg\Tmdb\WebService\TmdbWebServiceInterface;
+use Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface;
 use \Magento\Framework\UrlInterface;
 
 class Show extends Template
@@ -22,7 +22,7 @@ class Show extends Template
     private $makeUrl;
 
     /**
-     * @var \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
+     * @var \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
      */
     private $tmdbWebService;
 
