@@ -35,12 +35,12 @@ class Index extends Template
     private $tmdbRepository;
 
     /**
-     * @var Request
+     * @var Request $request
      */
     protected $request;
 
     /**
-     * @var \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdbRepository
+     * @var \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
      */
     private $tmdb;
 
@@ -57,15 +57,15 @@ class Index extends Template
         TmdbWebServiceInterface $tmdbWebService,
         TmdbRepositoryInterface $tmdbRepository,
         UrlInterface $makeUrl,
-        Request $request,
-        TmdbInterface $tmdb
+        TmdbInterface $tmdb,
+        Request $request
     )
     {
         $this->makeUrl = $makeUrl;
         $this->tmdbWebService = $tmdbWebService;
         $this->tmdbRepository = $tmdbRepository;
-        $this->request = $request;
         $this->tmdb = $tmdb;
+        $this->request = $request;
         parent::__construct($context);
     }
 
@@ -131,18 +131,6 @@ class Index extends Template
         return $this->getRequest()->getParam($key);
     }
 
-    public function singleMovie()
-    {
-        $tmdb_id = $this->getRequest()->getParam('tmdb_id');
-        $response = "";
-        if (!empty($tmdb_id)) {
-            $this->tmdbWebService->setMethodUrl("movie/". $tmdb_id);
-
-            $response = $this->tmdbWebService->sendRequest();
-        }
-
-        return $response;
-    }
 
     /**
      * Get Base URL
@@ -163,19 +151,17 @@ class Index extends Template
     {
         return $this->makeUrl->getUrl($path, $params);
     }
-
+    
     /**
-     * Check is a single Movie
+     * Returns Tmdb class
      *
-     * @return bool
+     * @param stdClass $obj
+     * @return Tmdb
      */
-    public function isSingleMovie(): bool
+    public function objToTmdb($obj)
     {
-        $tmdb_id = $this->getRequest()->getParam('tmdb_id');
-
-        if (!empty($tmdb_id)) {
-            return true;
-        }
-        return false;
+        $this->tmdb->setTmdb($obj);
+        return $this->tmdb;
     }
+
 }

@@ -60,6 +60,13 @@ interface TmdbWebServiceInterface
      * @return array
      */
     public function getParams();
+    
+    /**
+     * Returns Tmdb class
+     *
+     * @return Tmdb
+     */
+    public function sendRequestSingleMovie();
 
     /**
      * Instantiates request if necessary and sends off with collected data

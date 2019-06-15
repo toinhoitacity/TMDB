@@ -36,23 +36,6 @@ class Tmdb implements TmdbInterface
         return $this;
     }
 
-    /**
-     * @return float
-     */
-    public function getPrice(): float
-    {
-        return $this->movie[TmdbInterface::PRICE];
-    }
-
-    /**
-     * @param float $price
-     * @return TmdbInterface
-     */
-    public function setPrice(float $price): TmdbInterface
-    {
-        $this->movie[TmdbInterface::PRICE] = $price;
-        return $this;
-    }
 
     /**
      * @return string
@@ -117,12 +100,15 @@ class Tmdb implements TmdbInterface
     }
 
     /**
-     * @param array movie
+     * @param stdClass $movie
      * @return TmdbInterface
      */
-    public function setTmdb(array $movie): TmdbInterface
+    public function setTmdb($movie): TmdbInterface
     {
-        $this->movie = movie;
+        $this->setTitle($movie->title);
+        $this->setDescription($movie->overview);
+        $this->setMovieId($movie->id);
+        $this->setImageUrl($movie->poster_path);
         return $this;
     }
 }

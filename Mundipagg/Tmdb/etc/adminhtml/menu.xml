@@ -15,7 +15,7 @@
                 module="Mundipagg_Tmdb"
                 resource="Mundipagg_Tmdb::tmdb_movies"
                 sortOrder="10"
-                action="mundipagg_tmdb/index"
+                action="mundipagg_tmdb/movie/index"
                 parent="TMDB_AdminController::menu"/>
     </menu>
 </config>

@@ -3,17 +3,17 @@
 /**
  * This class is a Controller to TMDB module
  *
- * @package Mundipagg\Tmdb\Controller\Adminhtml\Index
+ * @package Mundipagg\Tmdb\Controller\Adminhtml\Movie
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Controller\Adminhtml\Index;
+namespace Mundipagg\Tmdb\Controller\Adminhtml\Movie;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\PageFactory;
 use \Magento\Backend\App\Action\Context;
 
-class Index extends Action
+class Show extends Action
 {
     protected $resultFactory;
 

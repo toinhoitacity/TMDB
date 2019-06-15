@@ -11,7 +11,7 @@ namespace Mundipagg\Tmdb\Service;
 
 use Magento\Catalog\Model\Product;
 use Magento\Framework\App\Filesystem\DirectoryList;
-use Magento\Framework\Filesystem\Io\File;
+use \Magento\Framework\Filesystem\Io\File;
 use Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface;
 
 class ImportImage implements ImportImageInterface
@@ -59,11 +59,20 @@ class ImportImage implements ImportImageInterface
         $this->file->checkAndCreateFolder($tmpDir);
 
         /** @var string $newFileName */
-        $newFileName = $tmpDir . baseName($imageUrl);
+        $newFileName = $tmpDir . "/" .baseName($imageUrl);
 
         /** @var bool|string $result */
         $result = $this->file->read($imageUrl, $newFileName);
-        if ($result) {
+        
+
+        echo "<pre>";
+        var_dump($imageUrl);
+        var_dump($newFileName);
+        var_dump($result);
+        exit();
+
+
+        if ($result === true) {
             $product->addImageToMediaGallery($newFileName, $imageType, true, $visible);
         }
         return $result;

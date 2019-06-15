@@ -30,17 +30,6 @@ interface TmdbInterface
     public function setTitle(string $title): TmdbInterface;
 
     /**
-     * @return float
-     */
-    public function getPrice(): float;
-
-    /**
-     * @param float $price
-     * @return TmdbInterface
-     */
-    public function setPrice(float $price): TmdbInterface;
-
-    /**
      * @return string
      */
     public function getDescription(): string;
@@ -79,8 +68,8 @@ interface TmdbInterface
     public function getTmdb(): array;
 
     /**
-     * @param array $movie
+     * @param stdClass $movie
      * @return TmdbInterface
      */
-    public function setTmdb(array $movie): TmdbInterface;
+    public function setTmdb($movie): TmdbInterface;
 }

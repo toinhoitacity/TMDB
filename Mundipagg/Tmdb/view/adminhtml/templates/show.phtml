@@ -1,0 +1,19 @@
+<h2>The Movie DB - Description</h2>
+
+<?php $movie = $block->getMovie(); ?>
+
+<?php $isSingleMovie = $block->isSingleMovie(); ?>
+
+<?php if($isSingleMovie): ?>
+    <h3><?=$movie->getTitle()?></h3>
+    <p><img src="<?=$block->getImageBaseUrl($movie->getImageUrl())?>"></p>
+    <p><?=$movie->getDescription()?></p>
+    <form method="get" action="<?= $block->getMakeUrl("mundipagg_tmdb/movie/save");?>">
+        <input name="tmdb_product" type="hidden" value="<?=$movie->getMovieId()?>"/>
+        <button type="submit">Add Movie as Product</button>
+    </form>
+<?php else: ?>
+    <h2>No movie!</h2>
+<?php endif;?>
+
+<?="-->" . var_dump($movie) . "<--"?>

@@ -81,7 +81,7 @@ class TmdbRepository implements TmdbRepositoryInterface
         $product = $this->productFactory->create();
         $product->setSku('MundipaggTmdb' . $tmdb->getMovieId()); // Set your sku here
         $product->setName($tmdb->getTitle()); // Name of Product
-        $product->setPrice($tmdb->getPrice()); // price of product
+        $product->setPrice(10.00); // price of product
 
         $product->setAttributeSetId(4); // Attribute set id
         $product->setStatus(1); // Status on product enabled/ disabled 1/0

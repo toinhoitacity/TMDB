@@ -15,6 +15,7 @@ use \Magento\Framework\HTTP\ZendClient;
 use \Zend\Http\Client;
 use Mundipagg\Tmdb\Helper\Data;
 use Mundipagg\Tmdb\HTTPClient\Token\ApiTokenInterface;
+use Mundipagg\Tmdb\Model\Tmdb;
 use Zend\Stdlib\Parameters;
 
 class TmdbWebService implements TmdbWebServiceInterface
@@ -33,18 +34,27 @@ class TmdbWebService implements TmdbWebServiceInterface
      * @var array
      */
     private $customParam;
+    
+    /**
+     * Tmdb object
+     *
+     * @var Tmdb
+     */
+    private $tmdb;
 
     /**
      * TmdbWebService constructor.
      *
      * @param \Zend\Http\Request $request
      * @param Zend\Http\Client $client
+     * @param Mundipagg\Tmdb\Model\Tmdb $tmdb
      * @param Mundipagg\Tmdb\Helper\Data $helperData
      */
-    public function __construct(Request $request, Client $client, ApiTokenInterface $apiToken)
+    public function __construct(Request $request, Client $client, Tmdb $tmdb, ApiTokenInterface $apiToken)
     {
         $this->request = $request;
         $this->client = $client;
+        $this->tmdb = $tmdb;
         $this->customParam = [
             "api_key" => $apiToken->getToken()
         ];
@@ -147,7 +157,21 @@ class TmdbWebService implements TmdbWebServiceInterface
     }
 
     /**
-     * Instantiates request if necessary and sends off with collected data
+     * Returns Tmdb class
+     *
+     * @return Tmdb
+     */
+    public function sendRequestSingleMovie()
+    {
+        $response = $this->client->send($this->getRequest());
+        
+        $this->tmdb->setTmdb(json_decode($response->getBody()));
+
+        return $this->tmdb;
+    }
+    
+    /**
+     * Returns Tmdb class
      *
      * @return mixed
      */
@@ -157,7 +181,7 @@ class TmdbWebService implements TmdbWebServiceInterface
 
         return json_decode($response->getBody());
     }
-
+    
     public function getImage($imagePath = "")
     {
         if (empty($imagePath)) {
