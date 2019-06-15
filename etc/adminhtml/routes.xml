@@ -1,7 +1,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
-        <route id="mundipagg_tmdb" frontName="mundipagg_tmdb">
-            <module name="Mundipagg_Tmdb"/>
+        <route id="toinhoitacity_tmdb" frontName="toinhoitacity_tmdb">
+            <module name="Toinhoitacity_Tmdb"/>
         </route>
     </router>
 </config>

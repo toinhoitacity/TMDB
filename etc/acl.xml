@@ -3,8 +3,8 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Mundipagg_Tmdb::tmdb_root" sortOrder="10" disabled="false" title="Parent Item">
-                    <resource id="Mundipagg_Tmdb::tmdb_movies" sortOrder="20" disabled="false" title="Movies"/>
+                <resource id="Toinhoitacity_Tmdb::tmdb_root" sortOrder="10" disabled="false" title="Parent Item">
+                    <resource id="Toinhoitacity_Tmdb::tmdb_movies" sortOrder="20" disabled="false" title="Movies"/>
                 </resource>
             </resource>
         </resources>

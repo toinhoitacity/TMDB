@@ -3,11 +3,11 @@
 /**
  * Interface for classes that returns a string image uri
  *
- * @package Mundipagg\Tmdb\HTTPClient\Image
+ * @package Toinhoitacity\Tmdb\HTTPClient\Image
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\HTTPClient\Image;
+namespace Toinhoitacity\Tmdb\HTTPClient\Image;
 
 
 interface ImageUriInterface
@@ -17,7 +17,7 @@ interface ImageUriInterface
 
     /**
      * @param  string $imageUri
-     * @return Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface
+     * @return Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface
      */
     public function setImageUri(string $imageUri): ImageUriInterface;
 

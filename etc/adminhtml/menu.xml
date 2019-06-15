@@ -5,17 +5,17 @@
                 id="TMDB_AdminController::menu"
                 title="The Movie DB"
                 translate="title"
-                module="Mundipagg_Tmdb"
-                resource="Mundipagg_Tmdb::tmdb_root"
+                module="Toinhoitacity_Tmdb"
+                resource="Toinhoitacity_Tmdb::tmdb_root"
                 sortOrder="20"/>
         <add
                 id="TMDB_AdminController::all_movies"
                 title="All Movies"
                 translate="title"
-                module="Mundipagg_Tmdb"
-                resource="Mundipagg_Tmdb::tmdb_movies"
+                module="Toinhoitacity_Tmdb"
+                resource="Toinhoitacity_Tmdb::tmdb_movies"
                 sortOrder="10"
-                action="mundipagg_tmdb/movie/index"
+                action="toinhoitacity_tmdb/movie/index"
                 parent="TMDB_AdminController::menu"/>
     </menu>
 </config>

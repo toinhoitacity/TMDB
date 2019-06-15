@@ -3,13 +3,13 @@
 /**
  * This class returns a string token
  *
- * @package Mundipagg\Tmdb\HTTPClient\Token
+ * @package Toinhoitacity\Tmdb\HTTPClient\Token
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\HTTPClient\Token;
+namespace Toinhoitacity\Tmdb\HTTPClient\Token;
 
-use Mundipagg\Tmdb\Helper\Data;
+use Toinhoitacity\Tmdb\Helper\Data;
 
 class ApiToken implements ApiTokenInterface
 {
@@ -19,7 +19,7 @@ class ApiToken implements ApiTokenInterface
     protected $apiToken = null;
 
     /**
-     * @var \Mundipagg\Tmdb\Helper\Data
+     * @var \Toinhoitacity\Tmdb\Helper\Data
      */
     private $helperData;
 
@@ -35,7 +35,7 @@ class ApiToken implements ApiTokenInterface
 
     /**
      * @param  string $apiToken
-     * @return Mundipagg\Tmdb\HTTPClient\Token\ApiTokenInterface $this
+     * @return Toinhoitacity\Tmdb\HTTPClient\Token\ApiTokenInterface $this
      */
     public function setToken(string $apiToken): ApiTokenInterface
     {

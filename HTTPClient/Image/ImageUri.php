@@ -3,11 +3,11 @@
 /**
  * This class returns a string with a image uri
  *
- * @package Mundipagg\Tmdb\HTTPClient\Image
+ * @package Toinhoitacity\Tmdb\HTTPClient\Image
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\HTTPClient\Image;
+namespace Toinhoitacity\Tmdb\HTTPClient\Image;
 
 class ImageUri implements ImageUriInterface
 {
@@ -25,7 +25,7 @@ class ImageUri implements ImageUriInterface
 
     /**
      * @param  string $imageUri
-     * @return Mundipagg\Tmdb\HTTPClient\Image\ImageUriInterface $this
+     * @return Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface $this
      */
     public function setImageUri(string $imageUri): ImageUriInterface
     {

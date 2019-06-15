@@ -3,11 +3,11 @@
 /**
  * This class returns datas from xml config file
  *
- * @package Mundipagg\Tmdb\Helper
+ * @package Toinhoitacity\Tmdb\Helper
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Helper;
+namespace Toinhoitacity\Tmdb\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\ScopeInterface;

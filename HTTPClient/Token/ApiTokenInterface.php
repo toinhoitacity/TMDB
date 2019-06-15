@@ -3,11 +3,11 @@
 /**
  * Basic interface that returns a token
  *
- * @package Mundipagg\Tmdb\HTTPClient\Token
+ * @package Toinhoitacity\Tmdb\HTTPClient\Token
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\HTTPClient\Token;
+namespace Toinhoitacity\Tmdb\HTTPClient\Token;
 
 interface ApiTokenInterface
 {
@@ -15,7 +15,7 @@ interface ApiTokenInterface
 
     /**
      * @param  string $apiToken
-     * @return Mundipagg\Tmdb\HTTPClient\Token\ApiTokenInterface
+     * @return Toinhoitacity\Tmdb\HTTPClient\Token\ApiTokenInterface
      */
     public function setToken(string $apiToken): ApiTokenInterface;
 
