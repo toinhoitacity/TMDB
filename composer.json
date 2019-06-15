@@ -1,14 +1,20 @@
 {
-  "name": "Mundipagg/Tmdb",
-  "description": "N/A",
+  "name": "mundipagg/tmdb",
+  "description": "The Movie DB for Magento 2.x",
   "require": {
     "php": "~7.1.3||~7.2.0",
     "magento/magento-composer-installer": "*"
   },
-  "suggest": {
-  },
   "type": "magento2-module",
   "license": [
+  ],
+  "authors": [
+    {
+      "name": "Antonio Gutierrez",
+      "email": "toinhoitacity@yahoo.com.br",
+      "homepage": "https://www.antoniogutierrez.com.br",
+      "role": "Technical Support"
+    }
   ],
   "autoload": {
     "files": [
