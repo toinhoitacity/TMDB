@@ -3,23 +3,23 @@
 /**
  * Interface for repository class
  *
- * @package Mundipagg\Tmdb\Api\TmdbRepositoryInterface
+ * @package Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Api;
+namespace Toinhoitacity\Tmdb\Api;
 
 
 use Magento\Catalog\Api\Data\ProductInterface;
-use Mundipagg\Tmdb\Api\Data\TmdbInterface;
-use Mundipagg\Tmdb\Api\Data\BoxInterface;
+use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
+use Toinhoitacity\Tmdb\Api\Data\BoxInterface;
 
 interface TmdbRepositoryInterface
 {
     /**
      * Save content.
      *
-     * @param \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
+     * @param \Toinhoitacity\Tmdb\Api\Data\TmdbInterface $tmdb
      * @return bool
      * @throws \Magento\Framework\Exception\InputException
      * @throws \Magento\Framework\Exception\StateException

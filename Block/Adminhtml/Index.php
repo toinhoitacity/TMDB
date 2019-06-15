@@ -3,17 +3,17 @@
 /**
  * Index Block Class
  *
- * @package Mundipagg\Tmdb\Block\Adminhtml
+ * @package Toinhoitacity\Tmdb\Block\Adminhtml
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Block\Adminhtml;
+namespace Toinhoitacity\Tmdb\Block\Adminhtml;
 
 use Magento\Framework\View\Element\Template;
 use \Magento\Backend\Block\Template\Context;
-use Mundipagg\Tmdb\Api\Data\TmdbInterface;
-use Mundipagg\Tmdb\WebService\TmdbWebServiceInterface;
-use Mundipagg\Tmdb\Api\TmdbRepositoryInterface;
+use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
+use Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface;
+use Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface;
 use \Magento\Framework\UrlInterface;
 use \Zend\Http\Request;
 
@@ -25,12 +25,12 @@ class Index extends Template
     private $makeUrl;
 
     /**
-     * @var \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
+     * @var \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
      */
     private $tmdbWebService;
 
     /**
-     * @var \Mundipagg\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
+     * @var \Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
      */
     private $tmdbRepository;
 
@@ -40,7 +40,7 @@ class Index extends Template
     protected $request;
 
     /**
-     * @var \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
+     * @var \Toinhoitacity\Tmdb\Api\Data\TmdbInterface $tmdb
      */
     private $tmdb;
 

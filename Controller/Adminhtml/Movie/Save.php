@@ -3,19 +3,19 @@
 /**
  * This class is a Controller to TMDB module
  *
- * @package Mundipagg\Tmdb\Controller\Adminhtml\Movie
+ * @package Toinhoitacity\Tmdb\Controller\Adminhtml\Movie
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Controller\Adminhtml\Movie;
+namespace Toinhoitacity\Tmdb\Controller\Adminhtml\Movie;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\PageFactory;
 use \Magento\Framework\Controller\ResultFactory;
 use \Magento\Backend\App\Action\Context;
-use Mundipagg\Tmdb\Api\TmdbRepositoryInterface;
-use Mundipagg\Tmdb\WebService\TmdbWebServiceInterface;
-use Mundipagg\Tmdb\Api\Data\TmdbInterface;
+use Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface;
+use Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface;
+use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
 
 class Save extends Action
 {
@@ -25,17 +25,17 @@ class Save extends Action
     protected $resultFactory;
     
     /**
-     * @var Mundipagg\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
+     * @var Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
      */
     private $tmdbRepository;
     
     /**
-     * @var \Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
+     * @var \Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
      */
     private $tmdbWebService;
     
     /**
-     * @var \Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
+     * @var \Toinhoitacity\Tmdb\Api\Data\TmdbInterface $tmdb
      */
     private $tmdb;
 
@@ -44,9 +44,9 @@ class Save extends Action
      *
      * @param  \Magento\Backend\App\Action\Context $context
      * @param  \Magento\Framework\View\Result\PageFactory $pageFactory
-     * @param  Mundipagg\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
-     * @param  Mundipagg\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
-     * @param  Mundipagg\Tmdb\Api\Data\TmdbInterface $tmdb
+     * @param  Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface $tmdbRepository
+     * @param  Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface $tmdbWebService
+     * @param  Toinhoitacity\Tmdb\Api\Data\TmdbInterface $tmdb
      */
     public function __construct(Context $context, PageFactory $pageFactory, TmdbRepositoryInterface $tmdbRepository, TmdbWebServiceInterface $tmdbWebService, TmdbInterface $tmdb)
     {
@@ -83,7 +83,7 @@ class Save extends Action
         //try {
             $this->tmdbRepository->save($this->getMovie());
             $redirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
-            return $resultRedirect->setPath('mundipagg_tmdb/movie/index');
+            return $resultRedirect->setPath('toinhoitacity_tmdb/movie/index');
         /*} catch (\Exception $err) {
             $page = $this->resultFactory->create();
             $page->setActiveMenu('TMDB_AdminController::all_movies');
@@ -120,6 +120,6 @@ class Save extends Action
      */
     public function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Mundipagg_Tmdb::tmdb_movies');
+        return $this->_authorization->isAllowed('Toinhoitacity_Tmdb::tmdb_movies');
     }
 }

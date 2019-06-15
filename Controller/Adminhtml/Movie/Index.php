@@ -3,11 +3,11 @@
 /**
  * This class is a Controller to TMDB module
  *
- * @package Mundipagg\Tmdb\Controller\Adminhtml\Movie
+ * @package Toinhoitacity\Tmdb\Controller\Adminhtml\Movie
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Controller\Adminhtml\Movie;
+namespace Toinhoitacity\Tmdb\Controller\Adminhtml\Movie;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\PageFactory;
@@ -51,6 +51,6 @@ class Index extends Action
      */
     public function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Mundipagg_Tmdb::tmdb_movies');
+        return $this->_authorization->isAllowed('Toinhoitacity_Tmdb::tmdb_movies');
     }
 }

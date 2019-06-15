@@ -3,11 +3,11 @@
 /**
  * Interface for Tmdb class
  *
- * @package Mundipagg\Tmdb\Service\ImportImageService
+ * @package Toinhoitacity\Tmdb\Service\ImportImageService
  * @author Antonio Gutierrez <gutierrez.computacao@gmail.com>
  * @version 1.0.0
  */
-namespace Mundipagg\Tmdb\Api\Data;
+namespace Toinhoitacity\Tmdb\Api\Data;
 
 
 interface TmdbInterface
