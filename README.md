@@ -1,19 +1,38 @@
-# The Movies Database for Magento platform
+# The Movie DB module for Magento 2
+## How to install The Movie DB module for Magento 2
+### 1. Install via composer (recommend)
 
-This module should only be used for the Magento platform
+We recommend you to install Toinhoitacity_Tmdb module via composer. Run the following command in Magento 2 root folder.
 
-## Installing the module
+#### 1.1 Install
 
-First you should have the Magento platform installed with an associated database
+```
+composer require toinhoitacity/tmdb
+php bin/magento setup:upgrade
+```
 
-Clone this repository into the app / code directory. Execute the command below on the terminal to enable the module:
+#### 1.2 Upgrade
 
-`$ php bin/magento module:enable Mundipagg_Tmdb`
+```
+composer update toinhoitacity/tmdb
+php bin/magento setup:upgrade
+```
 
-Execute the command for the module to be recognized by the platform
+If you are using the Magento platform in the default mode execute this command::
 
-`$ php bin/magento setup:upgrade`
+```
+php bin/magento setup:di:compile
+```
 
-If you are using the Magento platform in the default mode execute this command:
+### 2. Copy and paste
 
-`$ php bin/magento setup:di:compile`
+If you don't want to install via composer, you can use this way. 
+
+- Download [the latest version here](https://github.com/toinhoitacity/tmdb/archive/master.zip) 
+- Extract `master.zip` file to `app/code/Toinhoitacity/Tmdb` ; You should create a folder path `app/code/Toinhoitacity/Tmdb` if not exist.
+- Go to Magento root folder and run upgrade command line to install `Toinhoitacity_Tmdb`:
+
+```
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+```
