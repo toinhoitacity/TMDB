@@ -63,14 +63,6 @@ class ImportImage implements ImportImageInterface
 
         /** @var bool|string $result */
         $result = $this->file->read($imageUrl, $newFileName);
-        
-
-        echo "<pre>";
-        var_dump($imageUrl);
-        var_dump($newFileName);
-        var_dump($result);
-        exit();
-
 
         if ($result === true) {
             $product->addImageToMediaGallery($newFileName, $imageType, true, $visible);

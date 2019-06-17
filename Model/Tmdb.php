@@ -108,7 +108,7 @@ class Tmdb implements TmdbInterface
         $this->setTitle($movie->title);
         $this->setDescription($movie->overview);
         $this->setMovieId($movie->id);
-        $this->setImageUrl($movie->poster_path);
+        $this->setImageUrl(empty($movie->poster_path)? "":$movie->poster_path);
         return $this;
     }
 }

@@ -20,7 +20,11 @@ class ImageUri implements ImageUriInterface
      */
     public function __construct(string $imageUri = null)
     {
-        $this->imageUri = ImageUriInterface::IMAGE_URI . $imageUri;
+        if (empty($imageUri)) {
+            $this->imageUri = "https://dummyimage.com/300x450/aaaaaa/5c4711&text=No+image+available";
+        } else {
+            $this->imageUri = ImageUriInterface::IMAGE_URI . $imageUri;
+        }
     }
 
     /**
@@ -29,7 +33,11 @@ class ImageUri implements ImageUriInterface
      */
     public function setImageUri(string $imageUri): ImageUriInterface
     {
-        $this->imageUri = ImageUriInterface::IMAGE_URI . $imageUri;
+        if (empty($imageUri)) {
+            $this->imageUri = "https://dummyimage.com/300x450/aaaaaa/5c4711&text=No+image+available";
+        } else {
+            $this->imageUri = ImageUriInterface::IMAGE_URI . $imageUri;
+        }
         return $this;
     }
 

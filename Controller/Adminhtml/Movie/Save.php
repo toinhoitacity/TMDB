@@ -67,10 +67,7 @@ class Save extends Action
      */
     public function execute()
     {
-        //$page = $this->resultFactory->create();
         $this->saveProduct();
-
-        return $page;
     }
     
     /**
@@ -80,17 +77,9 @@ class Save extends Action
      */
     private function saveProduct()
     {
-        //try {
             $this->tmdbRepository->save($this->getMovie());
             $redirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
             return $resultRedirect->setPath('toinhoitacity_tmdb/movie/index');
-        /*} catch (\Exception $err) {
-            $page = $this->resultFactory->create();
-            $page->setActiveMenu('TMDB_AdminController::all_movies');
-            $page->getLayout()->initMessages();
-            $page->getLayout()->getBlock('tmdb.index')->setErrors($this->tmdbRepository->errors);
-            return $page;
-        }*/
     }
     
     /**

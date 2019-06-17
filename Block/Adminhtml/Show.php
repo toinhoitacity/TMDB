@@ -13,6 +13,7 @@ use Magento\Framework\View\Element\Template;
 use \Magento\Backend\Block\Template\Context;
 use Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface;
 use \Magento\Framework\UrlInterface;
+use Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface;
 
 class Show extends Template
 {
@@ -26,6 +27,10 @@ class Show extends Template
      */
     private $tmdbWebService;
 
+    /**
+     * @var \Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface $imageUri
+     */
+    private $imageUri;
 
     /**
      * Show constructor.
@@ -36,11 +41,13 @@ class Show extends Template
     public function __construct(
         Context $context,
         TmdbWebServiceInterface $tmdbWebService,
-        UrlInterface $makeUrl
+        UrlInterface $makeUrl,
+        ImageUriInterface $imageUri
     )
     {
         $this->makeUrl = $makeUrl;
         $this->tmdbWebService = $tmdbWebService;
+        $this->imageUri = $imageUri;
         parent::__construct($context);
     }
 
@@ -70,7 +77,7 @@ class Show extends Template
      */
     public function getImageBaseUrl($poster_path): string
     {
-        return TmdbWebServiceInterface::IMAGE_BASE_URL . "/" . $poster_path;
+        return $this->imageUri->setImageUri($poster_path)->getImageUri();
     }
 
     /**

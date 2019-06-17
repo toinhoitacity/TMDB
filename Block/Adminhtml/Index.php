@@ -14,6 +14,7 @@ use \Magento\Backend\Block\Template\Context;
 use Toinhoitacity\Tmdb\Api\Data\TmdbInterface;
 use Toinhoitacity\Tmdb\WebService\TmdbWebServiceInterface;
 use Toinhoitacity\Tmdb\Api\TmdbRepositoryInterface;
+use Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface;
 use \Magento\Framework\UrlInterface;
 use \Zend\Http\Request;
 
@@ -44,6 +45,10 @@ class Index extends Template
      */
     private $tmdb;
 
+    /**
+     * @var \Toinhoitacity\Tmdb\HTTPClient\Image\ImageUriInterface $imageUri
+     */
+    private $imageUri;
 
     /**
      * Index constructor.
@@ -58,6 +63,7 @@ class Index extends Template
         TmdbRepositoryInterface $tmdbRepository,
         UrlInterface $makeUrl,
         TmdbInterface $tmdb,
+        ImageUriInterface $imageUri,
         Request $request
     )
     {
@@ -66,6 +72,7 @@ class Index extends Template
         $this->tmdbRepository = $tmdbRepository;
         $this->tmdb = $tmdb;
         $this->request = $request;
+        $this->imageUri = $imageUri;
         parent::__construct($context);
     }
 
@@ -139,7 +146,7 @@ class Index extends Template
      */
     public function getImageBaseUrl($poster_path): string
     {
-        return TmdbWebServiceInterface::IMAGE_BASE_URL . "/" . $poster_path;
+        return $this->imageUri->setImageUri($poster_path)->getImageUri();
     }
 
     /**

@@ -79,7 +79,7 @@ class TmdbRepository implements TmdbRepositoryInterface
     {
         /** @var \Magento\Catalog\Api\Data\ProductInterface $product */
         $product = $this->productFactory->create();
-        $product->setSku('ToinhoitacityTmdb' . $tmdb->getMovieId()); // Set your sku here
+        $product->setSku('ToinhoitacityTmdb'. rand() . $tmdb->getMovieId()); // Set your sku here
         $product->setName($tmdb->getTitle()); // Name of Product
         $product->setPrice(10.00); // price of product
 
