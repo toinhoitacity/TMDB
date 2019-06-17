@@ -30,6 +30,17 @@ If you don't want to install via composer, you can use this way.
 
 - Download [the latest version here](https://github.com/toinhoitacity/tmdb/archive/master.zip) 
 - Extract `master.zip` file to `app/code/Toinhoitacity/Tmdb`; You should create a folder path `app/code/Toinhoitacity/Tmdb` if not exist.
+- A `tmdb-master` directory will be created. Move all files from the `tmdb-master` directory to the newly created module directory (`app/code/Toinhoitacity/Tmdb`):
+
+```
+cp -rap tmdb-master/* .
+```
+
+- Remove the directory created during the extraction process:
+
+```
+rm -rf tmdb-master
+```
 - Go to Magento root folder and run upgrade command line to install `Toinhoitacity_Tmdb`:
 
 ```
